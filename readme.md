@@ -8,19 +8,23 @@ Ha sido implementado en un entorno Windows.
 
 Su ejecución, esta explicado en el presente documento para el terminal de comandos de Windows.
 
+Nos hará también falta tener instalado Maven.
+
 ---
 
 ### Instalación del Programa
 
-En primer lugar, debemos de descargarnos el proyecto de GitHub, al que podemos acceder mediante este [link](https://github.com/rodrigoramil/ServicioWebAD1.git)
+En primer lugar, debemos de descargarnos el proyecto de GitHub, al que podemos acceder mediante este [link](https://github.com/rodrigoramil/Proyecto-servicio-web.git)
 
 Una vez dispongamos del proyecto, lo importaremos a nuestro entorno de trabajo, indicándole que deseamos importar ***Existing Maven Projects*** e indicándole la ruta del proyecto.
+
+Mediante el terminal de comandos de Windows, accederemos a la carpeta donde se encuentra nuestro proyecto y ejecutaremos el comando ***mvn compile***, y a continuación el comando ***mvn package***.
 
 ---
 
 ### Ejecución del programa
 
-Mediante el terminal de comandos de Windows, accederemos a la carpeta donde se encuentra nuestro proyecto, y allí accederemos a la carpeta ***target***.
+Si la instalación indicada anteriormente se realizó correctamente, accederemos mediante el terminal de comandos de Windows, a la carpeta carpeta ***target*** que se encuentra dentro de nuestro proyecto.
 
 A continuación, ejecutaremos el comando: 
 
