@@ -1,4 +1,4 @@
-package paqueteServidor;
+package servidorweb;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

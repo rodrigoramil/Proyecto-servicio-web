@@ -2,13 +2,23 @@
 
 ### Introducción
 
-Para desarrollar este proyecto hemos utilizado el lenguaje Java.
+El proyecto esta implementado en lenguaje Java.
 
-Ha sido implementado en un entorno Windows.
+Para su ejecución utilizaremos un entorno Windows.
 
-Su ejecución, esta explicado en el presente documento para el terminal de comandos de Windows.
+Necesitaremos tener instalado la [JDK](https://www.oracle.com/java/technologies/downloads/#jdk17-windows) de Java y  [Maven](https://maven.apache.org/download.cgi).
 
-Nos hará también falta tener instalado Maven.
+---
+
+### Configuración de Variables de entorno
+
+Tras la instalación de Maven, debemos configurar las variables de entorno para su correcto funcionamiento.
+Para ello accederemos a las `Propiedades del sistema` y pulsaremos el botón `Variables de entorno...`, En esta ventana configuraremos lo siguiente:
+
+- Pulsamos el botón `Nueva...` del aparatado variables del sistema. 
+- Rellenaremos el nombre de la variable `JAVA_HOME` y la ruta donde esta instalado Java (por defecto `C:\Program Files\Java\jdk-17.0.1\`). 
+- Añadiremos una nieva variable llamada `MAVEN_HOME` con el valor de la ruta donde esta la carpeta de Maven que habíamos descargado y descomprimido.
+- Editaremos la variable de entorno llamada `path` y añadiremos a la lista `%JAVA_HOME%\bin` y `%MAVEN_HOME%\bin`.
 
 ---
 
@@ -16,22 +26,16 @@ Nos hará también falta tener instalado Maven.
 
 En primer lugar, debemos de descargarnos el proyecto de GitHub, al que podemos acceder mediante este [link](https://github.com/rodrigoramil/Proyecto-servicio-web.git)
 
-Una vez dispongamos del proyecto, lo importaremos a nuestro entorno de trabajo, indicándole que deseamos importar ***Existing Maven Projects*** e indicándole la ruta del proyecto.
+Una vez dispongamos del proyecto, lo importaremos a nuestro entorno de trabajo, abrimos una terminal de comandos de Windows, nos colocamos en la ruta de nuestro proyecto y ejecutamos los siguientes comandos:
 
-Mediante el terminal de comandos de Windows, accederemos a la carpeta donde se encuentra nuestro proyecto y ejecutaremos el comando ***mvn compile***, y a continuación el comando ***mvn package***.
+- mvn install
+- mvn jacoco:report
 
 ---
 
 ### Ejecución del programa
 
-Si la instalación indicada anteriormente se realizó correctamente, accederemos mediante el terminal de comandos de Windows, a la carpeta carpeta ***target*** que se encuentra dentro de nuestro proyecto.
-
-A continuación, ejecutaremos el comando: 
-
-- ***java -cp Proyecto-servicio-web-0.0.1-SNAPSHOT.jar paqueteServidor.Server***
-
-Esto arrancará el servidor y estará preparado para realizar las pruebas de funcionamiento que se indican a continuación.
-
+Una vez ejecutados los comandos anteriormente indicados, ejecutaremos el archivo `inicio.bat` (que se encuentra en la raíz del proyecto), que automatiza la ejecución del programa y abrirá dos webs, una con los resultados de las pruebas unitarias que nos facilita Jacoco y otra con la ejecución del programa donde podemos realizar las pruebas de funcionamiento (NOTA: la web esta preparada para ejecutarse en el navegador Firefox).
 
 ---
 

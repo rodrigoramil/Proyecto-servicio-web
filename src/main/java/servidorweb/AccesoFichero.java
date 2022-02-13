@@ -1,4 +1,4 @@
-package paqueteServidor;
+package servidorweb;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -33,18 +33,16 @@ public class AccesoFichero {
 			buffer.newLine();
 		} catch (IOException e) {
 			System.out.println("Error al escribir en el fichero");
-			System.out.println(e.getMessage());
 		}
 		try {
 			buffer.close();
 			fichero.close();
 		} catch (IOException e) {
 			System.out.println("Error al cerrar el fichero");
-			System.out.println(e.getMessage());
 		}
 	}
 	
-	// Metodo que lee el fichero y almacena la información en un array
+	// Metodo que lee el fichero y almacena la informaciï¿½n en un array
 	public static ArrayList<String> leerFichero() {
 		listaDatos = new ArrayList<String>();
 		FileReader ficheroLectura = null;
